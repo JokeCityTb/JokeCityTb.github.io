@@ -27,7 +27,7 @@ Cocoapods是OS X和iOS下的一个第三类库管理工具，通过CocoaPods工�
 ```
 sudo gem update --system
 ```
-![PastedGraphic](/PastedGraphic.jpg)
+![logo](CocoaPods安装详解及原理/PastedGraphic.jpg)
 
 **2.更换Ruby镜像**
 >首先移除现有的Ruby镜像,因为ruby的软件源rubygem.org使用了亚马逊的云服务被屏蔽了,所以需要更新一下ruby的源,改换为淘宝的源:
