@@ -4,3 +4,6 @@
 [submodule "themes/hiker"]
 	path = themes/hiker
 	url = https://github.com/iTimeTraveler/hexo-theme-hiker.git
+[submodule "themes/yilia"]
+	path = themes/yilia
+	url = https://github.com/litten/hexo-theme-yilia.git
