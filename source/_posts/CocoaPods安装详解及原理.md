@@ -4,7 +4,8 @@ date: 2017-08-31 10:29:26
 tags: 代码管理 | iOS | OSX | 代码管理 | 效率
 ---
 
-# CocoaPods 
+![](CocoaPods安装详解及原理/IMG_0019.JPG)
+
 Cocoapods是OS X和iOS下的一个第三类库管理工具，通过CocoaPods工具我们可以为项目添加被称为“Pods”的依赖库 **这些类库必须是CocoaPods本身所支持的** 并且可以轻松管理其版本,项目的[源码](https:github.com/CocoaPods/CocoaPods)在github上管理,始于2011.8
 
 ## CocoaPods的好处
