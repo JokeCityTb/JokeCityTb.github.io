@@ -1,0 +1,12 @@
+[submodule "themes/hipaper"]
+	path = themes/hipaper
+	url = https://github.com/iTimeTraveler/hexo-theme-hipaper.git
+[submodule "themes/hiker"]
+	path = themes/hiker
+	url = https://github.com/iTimeTraveler/hexo-theme-hiker.git
+[submodule "themes/yilia"]
+	path = themes/yilia
+	url = https://github.com/litten/hexo-theme-yilia.git
+[submodule "hexo-theme-hiker"]
+	path = hexo-theme-hiker
+	url = git@github.com:iTimeTraveler/hexo-theme-hiker.git
