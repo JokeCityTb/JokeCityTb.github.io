@@ -1,1 +1,4 @@
 
+[submodule "themes/hiker"]
+	path = themes/hiker
+	url = git@github.com:iTimeTraveler/hexo-theme-hiker.git
