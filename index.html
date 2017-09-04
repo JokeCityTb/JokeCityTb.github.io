@@ -302,7 +302,15 @@
 <blockquote>
 <p>自动引用计数是指<strong><em>内存管理中对引用采取自动计数的技术</em></strong><br>让编译器来进行内存管理,编译器完全知道目标对象,并能立刻释放那些不再被使用的的对象.</p>
 </blockquote>
+        <!-- 
 
+自动引用计数是指内存管理中对引用采取自动计数的技术让编译器来进行内存管理,编译器完全知道目标对象,并能立刻释放那些不再被使用的的对象.
+
+
+...  -->
+        <p class="article-more-link">
+          <a href="/2017/09/04/自动引用计数/#more">weiter lesen</a>
+        </p>
       
     </div>
     <footer class="article-footer">
@@ -436,103 +444,14 @@
       
         <p><img src="/2017/08/31/CocoaPods安装详解及原理/IMG_0019.JPG" alt=""></p>
 <p>Cocoapods是OS X和iOS下的一个第三类库管理工具，通过CocoaPods工具我们可以为项目添加被称为“Pods”的依赖库 <strong>这些类库必须是CocoaPods本身所支持的</strong> 并且可以轻松管理其版本,项目的<a href="https:github.com/CocoaPods/CocoaPods" target="_blank" rel="external">源码</a>在github上管理,始于2011.8</p>
-<h2 id="CocoaPods的好处"><a href="#CocoaPods的好处" class="headerlink" title="CocoaPods的好处"></a>CocoaPods的好处</h2><ul>
-<li>在引入第三方库时它可以自动为我们完成各种各样的配置，包括配置<br>  编译阶段、连接器选项、甚至是ARC环境下的-fno-objc-arc配置     等;</li>
-<li>自动下载第三方开源库的的源代码,并且添加对应依赖的framework;</li>
-</ul>
-<h2 id="Cocoapods安装步骤"><a href="#Cocoapods安装步骤" class="headerlink" title="Cocoapods安装步骤"></a>Cocoapods安装步骤</h2><p><strong>1.升级Ruby环境</strong></p>
-<p>如果gem版本太老,可尝试如下命令升级gem</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">终端输入:gem update --system</div></pre></td></tr></table></figure>
-<p>若出现一下情况,这是因为你没有权限升级Ruby.可输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem update --system</div></pre></td></tr></table></figure>
-<p><img src="/2017/08/31/CocoaPods安装详解及原理/590A0F87-89AA-445E-8E89-F8B1E81277DE.png" alt=""></p>
-<p><strong>2.更换Ruby镜像</strong></p>
-<p>首先移除现有的Ruby镜像,因为ruby的软件源rubygem.org使用了亚马逊的云服务被屏蔽了,所以需要更新一下ruby的源,改换为淘宝的源:</p>
-<ul>
-<li>首先移除现有的Ruby镜像</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">em sources --remove https://rubygems.org/</div></pre></td></tr></table></figure>
-<ul>
-<li>添加国内最新镜像源</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem source -a https://gems.ruby-china.org/</div></pre></td></tr></table></figure>
-<ul>
-<li>执行完毕之后输入gem sources -l来查看当前镜像</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem sources -l</div></pre></td></tr></table></figure>
-<p>若出现下图说明添加成功</p>
-<blockquote>
-<p><img src="/2017/08/31/CocoaPods安装详解及原理/76AF4EF0-9E04-4064-94F6-E92653E6583E.png" alt=""></p>
-</blockquote>
-<p>否则继续执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem source -a https://gems.ruby-china.org/</div></pre></td></tr></table></figure>
-<p><strong>3.安装CocoaPods</strong></p>
-<p>安装命令：<code>sudo gem install cocoapods</code>,若出现以下情况:</p>
-<blockquote>
-<p><img src="/2017/08/31/CocoaPods安装详解及原理/E1157943-ABBB-4CF8-BF6C-47FEEAB33930.png" alt=""></p>
-</blockquote>
-<p>说明没有权限,需要终端输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/local/bin cocoapods</div></pre></td></tr></table></figure>
-<p>之后执行 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod setup`</div></pre></td></tr></table></figure>
-<p>该过程等待时间比较久.你可以command+n新建一个终端窗口，执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/.cocoapods/</div></pre></td></tr></table></figure>
-<p>进入到该文件夹下，然后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">du -sh*</div></pre></td></tr></table></figure></p>
-<p>来查看文件大小，每隔几分钟查看一次，这个目录最终大小是900多M,当出现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Setup completed</div></pre></td></tr></table></figure></p>
-<p>的时候说明已经完成了.</p>
-<p><strong><em>参考巧神的小秘诀</em></strong></p>
-<p>“使用CocoaPods的镜像索引” 可提高下载速度,可依次输入如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pod repo remove master</div><div class="line">pod repo add master https:gitcafe.com/akuandev/Specs.git</div><div class="line">pod repo update</div></pre></td></tr></table></figure>
-<h2 id="CocoaPods的使用"><a href="#CocoaPods的使用" class="headerlink" title="CocoaPods的使用"></a>CocoaPods的使用</h2><p><strong>1.首先我们来搜索一下三方库 </strong><br>终端输入: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod search AFNetworking</div></pre></td></tr></table></figure>
-<p>若出现以下情况：</p>
-<blockquote>
-<p><img src="/2017/08/31/CocoaPods安装详解及原理/5CE37CEF-837F-4EC8-83CC-9BBEA36D0B1F.png" alt=""></p>
-</blockquote>
-<p>这是因为之前pod search的时候生成了缓存文件<code>search_index.json</code><br>执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm ~/Library/Caches/CocoaPods/search_index.json</div></pre></td></tr></table></figure>
-<p>来删除该文件,然后再次输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod search AFNetworking</div></pre></td></tr></table></figure>
-<p>进行搜索这时会提示<code>Creating search index for spec repo &#39;master&#39;..</code>等待一会将会出现结果了</p>
-<p><strong>2.在工程中创建一个Podfile文件</strong></p>
-<p>要想在你的工程中创建Podfile文件 cd ….<code>该工程目录路径</code><br>必须先要进到该工程目录下,进来之后就创建</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch Podfile</div></pre></td></tr></table></figure>
-<p>然后你在你的工程目录下可以看到多了一个Podfile文件如下：</p>
-<blockquote>
-<p><img src="/2017/08/31/CocoaPods安装详解及原理/FBC94AEC-6105-4813-A03D-F1F10E27A4C6.png" alt=""></p>
-</blockquote>
-<p><strong>3.编辑你想导入的第三方库的名称及版本</strong></p>
-<p>使用vim编辑Podfile文件 终端输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim Podfile</div></pre></td></tr></table></figure>
-<p>假如我要安装AFNetworking,编辑完之后成如下样子</p>
-<blockquote>
-<p><img src="/2017/08/31/CocoaPods安装详解及原理/11D7FB63-4098-4EFA-8AF3-B95D85F2CE88.png" alt=""></p>
-</blockquote>
-<p><strong><em>编辑语句说明</em></strong></p>
-<p><code>&#39;platform :ios, &#39;7.0&#39;</code> 代表当前AFNetworking支持的iOS最低版本是iOS 7.0<br><code>CocoaProject</code> 就是你自己的工程名字,<br><code>pod &#39;AFNetworking&#39;</code>, ‘~&gt; 3.1.0’ 代表要下载的AFNetworking版本是3.1.0及以上版本,还可以去掉后面的’~&gt; 3.1.0’,直接写pod <code>AFNetworking</code> 这样代表下载的AFNetworking是最新版</p>
-<p><strong>4.把该库下载到Xcode中</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pod install</div></pre></td></tr></table></figure>
-<p>这就开始下载了，需要一段时间，出现如下界面就说明安装好了</p>
-<blockquote>
-<p><img src="/2017/08/31/CocoaPods安装详解及原理/2BD11E41-9D6B-4936-A723-641121385598.png" alt=""></p>
-</blockquote>
-<p>这个时候关闭所有的Xcode窗口，再次打开工程目录会看到多了一个后缀名为.xcworkspace文件</p>
-<blockquote>
-<p><img src="/2017/08/31/CocoaPods安装详解及原理/CEDEBF67-8E46-4317-9C9B-F6F35819D927.png" alt=""></p>
-</blockquote>
-<p>以后打开工程就双击这个文件打开了,而不再是打开.xcodeproj文件。<br>进入工程后引入头文件不再是#import “AFNetworking.h”，而是#import <afnetworking.h>,此刻说明CocoaPods 安装完成了.</afnetworking.h></p>
-<p><strong>5.注意事项 </strong><br>当你执行 <code>pod install</code> 除了Podfile文件外,还会生成一个Podfile.lock的文件，该文件会锁定当前各依赖库的版本,之后执行安装命令也不会更改版本，只有更新命令才会改变Podfile.lock.这样可以防止第三方库升级时造成第三方库版本不一样.</p>
-<blockquote>
-<p><img src="/2017/08/31/CocoaPods安装详解及原理/19CADFCA-228E-4F17-9760-5A6DA5BF1407.png" alt=""></p>
-</blockquote>
-<hr>
-<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p>CocoaPods 的原理是将所有的依赖库都放到一个名为Pods项目中，然后让主项目依赖Pods项目,这样,源码管理工作都从主项目移到了Pods项目中.下面是一些技术细节:</p>
-<ol>
-<li>Pods项目最终会编译成一个名为libPods.a,主项目只需要依赖这个.a文件即可</li>
-<li>对于资源文件,CocoaPods提供了一个名为Pods-resources.sh的bash脚本,该脚本在每次项目编译的时候都会执行,将第三方库的各种资源复制到目标目录中.</li>
-<li>CocoaPods 通过一个名为Pods.xcconfig的文件在编译时设置所有的依赖和参数.</li>
-</ol>
+        <!-- 
+Cocoapods是OS X和iOS下的一个第三类库管理工具，通过CocoaPods工具我们可以为项目添加被称为“Pods”的依赖库 这些类库必须是CocoaPods本身所支持的 并且可以轻松管理其版本,项目的源码在github上管理,始于2011.8
 
+CocoaPods的好处
+在引入第三方库时它可以自动为我们完成各种各样的配置，包括配置  编译阶段、连接器选项、甚至是ARC环境下的-f......  -->
+        <p class="article-more-link">
+          <a href="/2017/08/31/CocoaPods安装详解及原理/#more">weiter lesen</a>
+        </p>
       
     </div>
     <footer class="article-footer">
