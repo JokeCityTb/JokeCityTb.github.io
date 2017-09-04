@@ -3,22 +3,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>archives: 2017/9 | 唐斌的博客</title>
+  <title>自动引用计数 | 唐斌的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="OC" />
   
   
   
-  <meta name="description" content="iOS | Android | Java | C++ | Html5 | Python | Shell">
-<meta property="og:type" content="website">
-<meta property="og:title" content="唐斌的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/09/index.html">
+  
+  <meta name="description" content="自动引用计数是指内存管理中对引用采取自动计数的技术让编译器来进行内存管理,编译器完全知道目标对象,并能立刻释放那些不再被使用的的对象.">
+<meta name="keywords" content="OC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动引用计数">
+<meta property="og:url" content="http://yoursite.com/2017/09/04/自动引用计数/index.html">
 <meta property="og:site_name" content="唐斌的博客">
-<meta property="og:description" content="iOS | Android | Java | C++ | Html5 | Python | Shell">
+<meta property="og:description" content="自动引用计数是指内存管理中对引用采取自动计数的技术让编译器来进行内存管理,编译器完全知道目标对象,并能立刻释放那些不再被使用的的对象.">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2017/09/04/自动引用计数/自动引用计数/ARCPoster.jpg">
+<meta property="og:updated_time" content="2017-09-04T09:16:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="唐斌的博客">
-<meta name="twitter:description" content="iOS | Android | Java | C++ | Html5 | Python | Shell">
+<meta name="twitter:title" content="自动引用计数">
+<meta name="twitter:description" content="自动引用计数是指内存管理中对引用采取自动计数的技术让编译器来进行内存管理,编译器完全知道目标对象,并能立刻释放那些不再被使用的的对象.">
+<meta name="twitter:image" content="http://yoursite.com/2017/09/04/自动引用计数/自动引用计数/ARCPoster.jpg">
   
     <link rel="alternate" href="/atom.xml" title="唐斌的博客" type="application/atom+xml">
   
@@ -57,8 +63,6 @@
   
 
   
-    <link rel="stylesheet" href="/css/archive.css" >
-  
   
   
     <link rel="stylesheet" href="/css/vdonate.css" >
@@ -68,7 +72,7 @@
 
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
   
@@ -91,7 +95,7 @@
             
               <a class="brand" style="
                  margin-top: 0px;"  
-                 >
+                href="#" data-toggle="modal" data-target="#myModal" >
                   <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
               </a>
             
@@ -160,195 +164,116 @@
             
       <div id="content" class="outer">
         
-          <section id="main">
-  <div class="archives-tags-wrap"><blockquote><span>There are 3 posts in total till now.</span></blockquote>
+          <section id="main" style="float:none;"><article id="post-自动引用计数" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      自动引用计数
+    </h1>
+  
 
-
-<!-- 分页显示 -->
-
-	
-	
-		
-		
-		  
-		  
-		  <section class="archives-wrap">
-		    <div class="archive-year-wrap">
-		      <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
-		    </div>
-		    <div class="archives">
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
+      </header>
+    
+    <div class="article-meta">
       
-	<a href="/2017/09/04/自动引用计数/" class="archive-article-date">
+	<a href="/2017/09/04/自动引用计数/" class="article-date">
 	  <time datetime="2017-09-04T09:15:35.000Z" itemprop="datePublished">2017-09-04</time>
 	</a>
 
       
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/09/04/自动引用计数/">自动引用计数</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
       
-	<a href="/2017/09/02/C语言运算符/" class="archive-article-date">
-	  <time datetime="2017-09-02T11:50:46.000Z" itemprop="datePublished">2017-09-02</time>
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		PV:<span id="busuanzi_value_page_pv"></span>
+	</span>
 	</a>
 
+    </div>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/09/02/C语言运算符/">C语言运算符</a>
-    </h1>
-  
+        <p><img src="自动引用计数/ARCPoster.jpg" alt=""></p>
+<blockquote>
+<p>自动引用计数是指<strong><em>内存管理中对引用采取自动计数的技术</em></strong><br>让编译器来进行内存管理,编译器完全知道目标对象,并能立刻释放那些不再被使用的的对象.</p>
+</blockquote>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: 'Donate', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
+  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
+});
+</script>
+      
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OC/">OC</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/02/C语言运算符/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C语言运算符</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-	
-	
-		</div></section>
-	
 
-	<!-- 页数指示器 -->
-	
+<!-- Table of Contents -->
 
-
-
-
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="nav">None</ol>
+    
+    </div>
+  </aside>
 </section>
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Connect</h3>
-    <div class="widget widget_athemes_social_icons">
-
-    	<ul class="clearfix widget-social-icons">   
-    	
-          
-     			  <li><a href="https://github.com/iTimeTraveler" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="http://www.yoursite.com" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="" title="Google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-     			  <li><a href="" title="Flickr"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> 
-          
-   		
-          
-            <li><a href="mailto:?subject=请联系我&body=我能帮你什么" title="email"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> 
-          
-   		
-   		</ul>
-
-
-   		<!--
-   		<ul class="clearfix widget-social-icons">   		
-   		<li class="widget-si-twitter"><a href="http://twitter.com" title="Twitter"><i class="ico-twitter"></i></a></li> 
-		<li class="widget-si-facebook"><a href="http://facebook.com" title="Facebook"><i class="ico-facebook"></i></a></li>
-			<li class="widget-si-gplus"><a href="http://plus.google.com" title="Google+"><i class="ico-gplus"></i></a></li>
-			<li class="widget-si-pinterest"><a href="http://pinterest.com" title="Pinterest"><i class="ico-pinterest"></i></a></li>
-			<li class="widget-si-flickr"><a href="http://flickr.com" title="Flickr"><i class="ico-flickr"></i></a></li>
-			<li class="widget-si-instagram"><a href="http://instagram.com" title="Instagram"><i class="ico-instagram"></i></a></li>
-		</ul> -->
-
-    </div>
-  </div>
-
-
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OC/">OC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OC-工具/">OC | 工具</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/OC/" style="font-size: 10px;">OC</a> <a href="/tags/OC-工具/" style="font-size: 10px;">OC | 工具</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/09/04/自动引用计数/">自动引用计数</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/02/C语言运算符/">C语言运算符</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/31/CocoaPods安装详解及原理/">CocoaPods安装详解及原理</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
         
       </div>
       
@@ -444,6 +369,8 @@
 
 
 
+  <script src="/js/dialog.js"></script>
+
 
 
 
@@ -527,6 +454,8 @@
   
   <a id="rocket" href="#top" class=""></a>
   <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
   
 </body>
 </html>
