@@ -1,7 +1,8 @@
 ---
 title: CocoaPods安装详解及原理
 date: 2017-08-31 10:29:26
-tags: OC | 工具
+tags: OC  
+categories: 工具
 ---
 
 ![](CocoaPods安装详解及原理/IMG_0019.JPG)
