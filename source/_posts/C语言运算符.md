@@ -5,9 +5,7 @@ tags: C
 categories: C
 ---
 
-
-
-{% asset_img IMG_9.2.JPG &nbsp; %}
+![](C语言运算符/IMG_9.2.JPG)
 
 <!-- more -->
 
