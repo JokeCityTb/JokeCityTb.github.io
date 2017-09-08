@@ -3,6 +3,9 @@ title: “流程控制-if”
 date: 2017-0 9-04 21:48:17
 tags: C语言
 categories: 流程控制
+photos:
+    - https://github.com/JokeCityTb/JokeCityTb.github.io/blob/hexo/source/_posts/“流程控制-if”/ifLiu.JPG
+
 ---
 
 ![](“流程控制-if”/ifLiu.JPG)
